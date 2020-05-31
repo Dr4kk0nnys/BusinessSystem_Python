@@ -1,1 +1,2 @@
-{'name': 'Test', 'cpf': 'Test', 'phone_number': '123', 'adress': 'Test 123 teste 1'}
+{'name': 'Renato Santos Versiani', 'cpf': '159.543.626-02', 'phone_number': '38 9 8402-2924', 'adress': 'Rua professora edna meireles 176 Morrinhos', 'client_id': 15}
+{'name': 'Raphael Soares', 'cpf': '000.000.000-00', 'phone_number': '38 9 9132-6330', 'adress': 'No idea where he lives 000 No idea', 'client_id': 16}

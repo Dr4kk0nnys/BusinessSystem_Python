@@ -1,6 +1,5 @@
 from modules.database import Database
 from modules.utils import *
-from modules.database_utils import *
 
 
 class System():
@@ -37,15 +36,7 @@ class System():
 
         if (user_input == '1'):
 
-            '''
-                TODO: Make a config.txt file and on the first line it will have the primary's database 'serial_number' or whatever the fuck you wanna call it.
-                On the second line it will have the secondary's database 'serial_number'
-
-                TODO: Make a function that identifies the serial_number and places it as the 'order / client' number ( like the 'numero da ordem de servico' )
-                and return's it and increment's it on both database and number that return's it.
-            '''
-
-            client_info = get_client_info()
+            client_info = self.primary_database.get_client_info()
 
             self.primary_database.write(str(client_info))
 

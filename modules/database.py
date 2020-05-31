@@ -9,7 +9,7 @@ class Database():
     def write(self, data):
 
         file = open(self.database_name, 'a')
-        # file.write(data + ' ' + self.get_serial() + '\n')
+        file.write(data + '\n')
 
     # return the query with all the data inside the database
     def read(self):
@@ -61,16 +61,11 @@ class Database():
         file = open('.serial.txt', 'r')
         lines = file.readlines()
 
-        index = ''
+        index = 1
         if (self.database_name == 'clients.txt'):
             index = 0
-        else:
-            index = 1
 
         result = int(lines[index])
-
-        print(lines)
-
         lines[index] = result + 1
 
         file = open('.serial.txt', 'w')
@@ -79,6 +74,22 @@ class Database():
                    '\n' + str(lines[1]).strip('\n'))
 
         return lines[index]
+
+    # return the client id automatically
+    def get_client_info(self):
+
+        name = input('Name: ')
+        cpf = input('CPF: ')
+        phone_number = input('Phone number: ')
+        adress = input('Adress: ')
+
+        return {
+            'name': name,
+            'cpf': cpf,
+            'phone_number': phone_number,
+            'adress': adress,
+            'client_id': self.get_serial()
+        }
 
 
 if __name__ == '__main__':
@@ -96,4 +107,4 @@ if __name__ == '__main__':
 
     # database.update(0, 'This is the new index 0')
 
-    database.get_serial()
+    print(database.get_serial())
