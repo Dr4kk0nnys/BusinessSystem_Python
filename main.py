@@ -36,15 +36,77 @@ class System():
 
         if (user_input == '1'):
 
-            client_info = self.primary_database.get_client_info()
+            print('Add client ->\n')
 
+            client_info = self.primary_database.get_client_info()
             self.primary_database.write(str(client_info))
 
             print('Successfully saved the info! [200]')
 
         elif (user_input == '2'):
 
-            print('Yayyy 2')
+            print('Remove client ->\n')
+
+            index = input('Index: ')
+            self.primary_database.delete(int(index))
+
+            print('Successfully removed the client! [200]')
+
+        elif (user_input == '3'):
+
+            print('Update client info ->\n')
+
+            index = input('Index: ')
+            new_client_info = self.primary_database.get_client_info()
+
+            self.primary_database.update(int(index), str(new_client_info))
+
+            print('Succesfully updated the client info [200]')
+
+        elif (user_input == '4'):
+
+            print('Add order ->\n')
+
+            order_info = self.secondary_database.get_order_info()
+            self.secondary_database.write(str(order_info))
+
+            print('Successfully added the order! [200]')
+
+        elif (user_input == '5'):
+
+            print('Remove order ->\n')
+
+            index = input('Index: ')
+            self.secondary_database.delete(int(index))
+
+            print('Successfully removed the order! [200]')
+
+        elif (user_input == '6'):
+
+            print('Update order info ->\n')
+
+            index = input('Index: ')
+            new_order_info = self.secondary_database.get_order_info()
+
+            self.secondary_database.update(int(index), str(new_order_info))
+
+            print('Successfully updated the order info! [200]')
+
+        elif (user_input == '7'):
+
+            print('Read client database ->\n')
+
+            option = input('CPF or Name: ')
+
+            self.primary_database.read_(option)
+
+        elif (user_input == '8'):
+
+            print('Read order database ->\n')
+
+            option = input('Client ID or Order ID: ')
+
+            self.secondary_database.read_(option)
 
         elif (user_input == '9'):
 

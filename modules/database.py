@@ -20,6 +20,20 @@ class Database():
         for i in range(len(lines)):
             print(f'Index {i}: {lines[i]}', end='')
 
+    # return the query with all the matches inside the database
+    def read_(self, value):
+        '''
+            TODO: Improve this part of the code, making it more abrassive
+            ( search for lower letters, cpf without the dots, etc ...)
+        '''
+
+        file = open(self.database_name, 'r')
+        lines = file.readlines()
+
+        for i in range(len(lines)):
+            if (value in lines[i]):
+                print(f'Index {i}: {lines[i]}', end='')
+
     # removes the value inside the index
     def delete(self, index):
 
@@ -31,6 +45,7 @@ class Database():
             del lines[index]
         else:
             print('Invalid index')
+            return
 
         # clean the database
         file = open(self.database_name, 'w')
@@ -56,6 +71,7 @@ class Database():
         for line in lines:
             file.write(line)
 
+    # get_serial will return the serial value for the new query, and increase itself's value
     def get_serial(self):
 
         file = open('.serial.txt', 'r')
@@ -89,6 +105,19 @@ class Database():
             'phone_number': phone_number,
             'adress': adress,
             'client_id': self.get_serial()
+        }
+
+    def get_order_info(self):
+
+        client_id = input('Client id: ')
+        specifications = input('Specifications: ')
+        problem = input('Problem: ')
+
+        return {
+            'client_id': client_id,
+            'specifications': specifications,
+            'problem': problem,
+            'order_id': self.get_serial()
         }
 
 
