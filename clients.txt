@@ -2,3 +2,4 @@
 {'name': 'Raphael Soares', 'cpf': '000.000.000-00', 'phone_number': '38 9 9132-6330', 'adress': 'No idea where he lives 000 No idea', 'client_id': 16}
 {'name': 'Avengers OP', 'cpf': '0000000000000000', 'phone_number': '000000000000000000 00000000', 'adress': ')0000000(', 'client_id': 23}
 {'name': 'This is still a test', 'cpf': '000.000.000-00', 'phone_number': '00 0 0000-0000', 'adress': 'This is just a test, street Test, num 0', 'client_id': 25}
+{'name': 'This is a complete test', 'cpf': '000.000.000-00', 'phone_number': '38 9 0000 0000', 'adress': 'Rua professora edna meireles', 'client_id': 26}

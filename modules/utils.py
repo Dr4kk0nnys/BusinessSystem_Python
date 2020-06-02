@@ -13,3 +13,16 @@ def show_options():
 [ 8 ] - Read Order's database
 [ 9 ] - Leave
 ''')
+
+
+def get_option_value(option_value):
+
+    if (option_value == '1'): print('[Add client] ', end='')
+    elif (option_value == '2'): print('[Remove client] ', end='')
+    elif (option_value == '3'): print('[Update client] ', end='')
+
+    elif (option_value == '4'): print('[Add order] ', end='')
+    elif (option_value == '5'): print('[Remove order] ', end='')
+    elif (option_value == '6'): print('[Update order] ', end='')
+
+    elif (option_value == '9'): print('Leave')
