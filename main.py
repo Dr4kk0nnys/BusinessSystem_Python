@@ -3,6 +3,8 @@ from modules.utils import *
 
 # TODO: Make the cpf.get() easier
 # TODO: Make it error proof ( watch the how to become a better dev video ( https://www.youtube.com/watch?v=g2nMKzhkvxw ))
+# TODO: Make a portuguese version ( other git branch )
+# TODO: Make a cpf searcher, whenever adding a new client
 
 
 class System():
