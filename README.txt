@@ -41,3 +41,7 @@
         -> {
             * Read both client's and order's database will allow the user to quickly search through the database with shortcuts ( like the name or the client_id value )
         }
+
+TODO:
+    - Add an interface ( TKINTER )
+    - Make it cross-pc ( multiple machines working with the same database (socket ?) )
